@@ -85,7 +85,7 @@ class WelcomeScreen extends StatelessWidget {
                   Text(
                     'Login',
                     style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xFF32B768),
                         fontWeight: FontWeight.bold,
                         fontSize: 14),
                   )
