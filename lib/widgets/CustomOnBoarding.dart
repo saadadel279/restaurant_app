@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:introduction_screen/introduction_screen.dart';
-=======
->>>>>>> main
 
-class CustomOnBoarding extends StatefulWidget {
-  const CustomOnBoarding({super.key});
+class CustomOnBoarding extends StatelessWidget {
+  CustomOnBoarding({super.key});
+  Color backGroundPageColor = const Color(0xffFFFFFF);
 
-  @override
-  State<CustomOnBoarding> createState() => _CustomOnBoardingState();
-}
-
-class _CustomOnBoardingState extends State<CustomOnBoarding> {
   @override
   Widget build(BuildContext context) {
-    return PageView();
+    return Container(
+      decoration: BoxDecoration(color: backGroundPageColor),
+      child: const Center(
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
   }
 }

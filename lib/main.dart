@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/Screens/OnboardingScreen.dart';
 import 'package:restaurant_app/widgets/CustomOnBoarding.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: CustomOnBoarding(),
+        body: OnboardingPage(),
       ),
     );
   }
