@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:introduction_screen/introduction_screen.dart';
+=======
+>>>>>>> main
 
 class CustomOnBoarding extends StatefulWidget {
   const CustomOnBoarding({super.key});
