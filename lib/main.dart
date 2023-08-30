@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/Screens/OnboardingScreen.dart';
-import 'package:restaurant_app/widgets/CustomOnBoarding.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:restaurant_app/Screens/ForgetPassword/CheckingEmail.dart';
+import 'package:restaurant_app/Screens/ForgetPassword/ForgetPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
+      routes: {
+        ForgetPasswordPage.id: (context) => ForgetPasswordPage(),
+        CheckingEmail.id: (context) => CheckingEmail(),
+      },
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: OnboardingPage(),
+        body: ForgetPasswordPage(),
       ),
     );
   }
