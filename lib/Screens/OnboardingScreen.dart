@@ -1,7 +1,7 @@
 import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/core/utils/Styles.dart';
-import 'package:restaurant_app/core/utils/constants.dart';
+import 'package:restaurant_app/core/Styles.dart';
+import 'package:restaurant_app/core/constants.dart';
 import 'package:restaurant_app/widgets/CustomOnBoarding.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
