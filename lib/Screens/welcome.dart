@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/Screens/creat_account_and_login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -43,7 +44,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              ShoModalBottomSheet(context,creatAccount: true);
+            },
             child: Container(
               width: 256,
               height: 49,
@@ -69,6 +72,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
           ),
           GestureDetector(
+            onTap: () {
+              ShoModalBottomSheet(context,creatAccount: false);
+            },
             child: Container(
               width: 256,
               height: 49,
@@ -128,4 +134,25 @@ class WelcomeScreen extends StatelessWidget {
       ),
     );
   }
+
+  void ShoModalBottomSheet(BuildContext context ,{required bool? creatAccount}) {
+   
+    showModalBottomSheet(
+      
+        isScrollControlled: true,
+        showDragHandle: true,
+        context: context,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(36))),
+        builder:  (BuildContext context) {
+          if(creatAccount! ==true){
+            return  BodyOfShowModelBottomSheet(creatAccount: true,);
+          } else{
+            return BodyOfShowModelBottomSheet(creatAccount: false,) ;
+          }
+           
+        });
+  }
 }
+
+
