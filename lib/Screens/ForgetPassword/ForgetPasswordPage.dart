@@ -1,9 +1,11 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:restaurant_app/Screens/ForgetPassword/CheckingEmail.dart';
-import 'package:restaurant_app/core/Styles.dart';
-import 'package:restaurant_app/widgets/ForgetPassword/CustomButton.dart';
-import 'package:restaurant_app/widgets/ForgetPassword/CustomTextField.dart';
+import 'package:restaurant_app/Screens/ForgetPassword/CheckingEmailPage.dart';
+import 'package:restaurant_app/core/Style.dart';
+import 'package:restaurant_app/Widget/ForgetPassword/CustomButton.dart';
+import 'package:restaurant_app/Widget/ForgetPassword/CustomTextField.dart';
 
 class ForgetPasswordPage extends StatefulWidget {
   const ForgetPasswordPage({super.key});
@@ -13,11 +15,12 @@ class ForgetPasswordPage extends StatefulWidget {
 }
 
 class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
-  Color? primaryColor;
+  Color? buttonColor;
+  Color? textButtonColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 32),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,15 +29,15 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
           ),
           Text(
             'Forget Password',
-            style: styles.style.copyWith(
+            style: Styles.style.copyWith(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              color: Color(0xff374151),
+              color: const Color(0xff374151),
             ),
           ),
           Text(
             'Enter your registered email below',
-            style: styles.style.copyWith(
+            style: Styles.style.copyWith(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               color: const Color(0xff9CA3AF),
@@ -44,12 +47,15 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             height: 50,
           ),
           CustomTextfield(
+            label: 'Email address',
             onChanged: (val) {
               setState(() {
-                primaryColor = val.isEmpty
+                buttonColor = val.isEmpty
                     ? const Color(0xffF4F4F4)
                     : const Color(0xff32B768);
-                print(val);
+                textButtonColor = val.isEmpty
+                    ? const Color(0xff9CA3AF)
+                    : const Color(0xffF4F4F4);
               });
             },
           ),
@@ -60,13 +66,13 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
               text: TextSpan(children: [
             TextSpan(
                 text: 'Remember the password?',
-                style: styles.style.copyWith(
+                style: Styles.style.copyWith(
                     color: const Color(0xff9CA3AF),
                     fontSize: 14,
                     fontWeight: FontWeight.w600)),
             TextSpan(
                 text: ' Sign in',
-                style: styles.style.copyWith(color: const Color(0xff32B768)))
+                style: Styles.style.copyWith(color: const Color(0xff32B768)))
           ])),
           const Spacer(
             flex: 2,
@@ -75,9 +81,12 @@ class _ForgetPasswordPageState extends State<ForgetPasswordPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomButton(
-                backGroundcolor: primaryColor,
-                OnTap: () {
-                  Navigator.pushNamed(context, CheckingEmail.id);
+                textButtonColor: textButtonColor,
+                textButton: 'Submit',
+                backGroundColor: buttonColor,
+                onTap: () {
+                  Get.to(() => const CheckingEmail(),
+                      transition: Transition.rightToLeft);
                 },
               ),
             ],

@@ -1,8 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:awesome_icons/awesome_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/core/Styles.dart';
-import 'package:restaurant_app/core/constants.dart';
-import 'package:restaurant_app/widgets/OnBoarding/CustomOnBoarding.dart';
+import 'package:restaurant_app/core/Style.dart';
+import 'package:restaurant_app/core/Constant.dart';
+import 'package:restaurant_app/Widget/OnBoarding/CustomOnBoarding.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -19,21 +21,21 @@ class _OnboardingPageState extends State<OnboardingPage> {
     return Stack(children: [
       PageView(
         controller: controller,
-        children: [
+        children: const [
           CustomOnBoarding(
-            imageUrl: trackinImageUrl,
+            imageUrl: trackImageUrl,
             title: 'Nearby restaurants',
             subtitle:
                 "You don't have to go far to find a good restaurant\n we have provided all the restaurants that is\n near you",
           ),
           CustomOnBoarding(
-            imageUrl: OrderImageUrl,
+            imageUrl: orderImageUrl,
             title: 'Select the Favorites Menu',
             subtitle:
                 "Now eat well, don't leave the house,You can \nchoose your favorite food only with \none click",
           ),
           CustomOnBoarding(
-            imageUrl: SafeFoodImageUrl,
+            imageUrl: safeFoodImageUrl,
             title: 'Good food at a cheap price',
             subtitle:
                 "You can eat at expensive restaurants with\n affordable price",
@@ -52,7 +54,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
               },
               child: Text(
                 'Skip',
-                style: styles.style
+                style: Styles.style
                     .copyWith(color: const Color(0xff4B5563), fontSize: 16),
               ),
             ),
