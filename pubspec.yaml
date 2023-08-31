@@ -9,8 +9,14 @@ environment:
   sdk: '>=3.1.0 <4.0.0'
 
 dependencies:
+
   awesome_icons: ^1.1.0
   cupertino_icons: ^1.0.2
+
+  smooth_page_indicator: ^1.1.0
+  introduction_screen: ^3.1.11
+
+
   flutter:
     sdk: flutter
   get: ^4.6.5
@@ -27,5 +33,10 @@ flutter:
   uses-material-design: true
 
   assets:
-
     - assets/Images/OnBoarding/
+    - assets/LoginAndRegister/
+    - assets/OnBoarding/
+  #   - images/a_dot_ham.jpeg
+
+
+
