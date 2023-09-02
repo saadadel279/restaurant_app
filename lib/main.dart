@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:restaurant_app/Screens/ForgetPassword/CheckingEmailPage.dart';
 import 'package:restaurant_app/Screens/ForgetPassword/ForgetPasswordPage.dart';
-import 'package:restaurant_app/Screens/welcome.dart';
+import 'package:restaurant_app/Screens/Onboarding/OnboardingPage.dart';
 
 
 void main() {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       },
       debugShowCheckedModeBanner: false,
 
-      home: const WelcomeScreen(),
+      home: const OnboardingPage(),
 
     );
   }

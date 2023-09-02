@@ -20,7 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
-  smooth_page_indicator: ^1.1.0
+ 
 
 dev_dependencies:
 

@@ -1,9 +1,10 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/core/Style.dart';
+import 'package:restaurant_app/Screens/Welcome%20and%20Register/creat_account_and_login_screen.dart';
 import 'package:restaurant_app/Widget/ForgetPassword/CustomButton.dart';
 import 'package:restaurant_app/Widget/ForgetPassword/CustomCheckIcon.dart';
+import 'package:restaurant_app/core/Style.dart';
 
 class CheckingNewPassword extends StatelessWidget {
   const CheckingNewPassword({super.key});
@@ -42,7 +43,11 @@ class CheckingNewPassword extends StatelessWidget {
               height: 198,
             ),
             CustomButton(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return BodyOfShowModelBottomSheet(creatAccount:false);
+                },));
+              },
               textButton: 'sign in',
               textButtonColor: const Color(0xffffffff),
               backGroundColor: const Color(0xff32B768),

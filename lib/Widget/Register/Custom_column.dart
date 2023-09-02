@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/widgets/Custom_TextField.dart';
-import 'package:restaurant_app/widgets/custom_text.dart';
+import 'package:restaurant_app/Widget/Register/Custom_TextField.dart';
+import 'package:restaurant_app/Widget/Register/custom_text.dart';
 
 class CustomColumn extends StatelessWidget {
    const CustomColumn({

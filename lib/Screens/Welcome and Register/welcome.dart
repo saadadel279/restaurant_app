@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:restaurant_app/Screens/creat_account_and_login_screen.dart';
+import 'package:restaurant_app/Screens/Welcome%20and%20Register/creat_account_and_login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -146,9 +146,9 @@ class WelcomeScreen extends StatelessWidget {
             borderRadius: BorderRadius.vertical(top: Radius.circular(36))),
         builder:  (BuildContext context) {
           if(creatAccount! ==true){
-            return  BodyOfShowModelBottomSheet(creatAccount: true,);
+            return  Scaffold(body: BodyOfShowModelBottomSheet(creatAccount: true,));
           } else{
-            return BodyOfShowModelBottomSheet(creatAccount: false,) ;
+            return Scaffold(body: BodyOfShowModelBottomSheet(creatAccount: false,));
           }
            
         });
